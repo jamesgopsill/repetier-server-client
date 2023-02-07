@@ -38,22 +38,6 @@ export interface WsRequest {
 }
 
 /*
-export enum RepetierServerEvents {
-	OPEN = "open",
-	MESSAGE = "message",
-	DISCONNECTED = "disconnected",
-}
-
-export interface RepetierMessageBase {
-	callback_id: number
-}
-
-export type RepetierMessage = {
-	data: any[]
-	callback_id: number
-	eventList: boolean
-} | null
-
 
 	MESSAGE = "message",
 	SERVER_EVENT = "serverEvent",
@@ -88,19 +72,4 @@ export type RepetierMessage = {
 	DISCONNECTED = "disconnected",
 	CONNECTION_ERROR = "connectionError",
 
-export interface Ping {
-	action: "ping"
-	data: {}
-	printer: string
-	callback_id: number
-}
-
-export interface ExtendPing {
-	action: "extendPing"
-	data: {
-		timeout: number
-	}
-	printer: string
-	callback_id: number
-}
 	*/
