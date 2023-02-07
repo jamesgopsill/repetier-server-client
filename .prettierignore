@@ -1,0 +1,4 @@
+pnpm-lock.yml
+dist/
+docs/
+node_modules/
