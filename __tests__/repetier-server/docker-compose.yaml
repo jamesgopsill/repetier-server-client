@@ -2,6 +2,6 @@ version: "3.7"
 
 services:
   repetier:
-    image: yadomi/repetier-server
+    image: yadomi/repetier-server:v1.4.6
     ports:
       - 3344:3344

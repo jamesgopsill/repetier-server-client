@@ -47,6 +47,16 @@ test(`List Printer`, async () => {
 	}
 })
 
+test(`State List`, async () => {
+	const r = await client.stateList()
+	if (r) {
+		console.log(r)
+		expect(true).toBe(true)
+	} else {
+		expect(true).toBe(false)
+	}
+})
+
 afterAll(() => {
 	console.log("Closing connection.")
 	client.disconnect()

@@ -22,11 +22,11 @@ export interface PrinterInfo {
 	slug: string
 }
 
-export type WsResponse = GenericResponse | null
+export type WsResponse<T> = GenericResponse<T> | null
 
-export interface GenericResponse {
+export interface GenericResponse<T> {
 	callback_id: string
-	data: any
+	data: T
 	session: string
 }
 
@@ -36,40 +36,3 @@ export interface WsRequest {
 	data: any
 	printer?: string
 }
-
-/*
-
-	MESSAGE = "message",
-	SERVER_EVENT = "serverEvent",
-	LOGIN_REQUIRED = "loginRequired",
-	LOGOUT = "logout",
-	USER_CREDENTIALS = "userCredentials",
-	PRINTER_LIST_CHANGED = "printerListChanged",
-	MESSAGES_CHANGED = "messagesChanged",
-	MOVE = "move",
-	LOG = "log",
-	JOBS_CHANGED = "jobsChanged",
-	JOB_FINISHED = "jobsFinished",
-	JOB_KILLED = "jobKilled",
-	JOB_STARTED = "jobStarted",
-	PRINT_QUEUE_CHANGED = "printqueueChanged",
-	FOLDERS_CHANGED = "foldersChanged",
-	EEPROM_CLEAR = "eepromClear",
-	EEPROM_DATA = "eepromData",
-	STATE = "state",
-	CONFIG = "config",
-	FIRMWARE_CHANGED = "firmwareChanged",
-	TEMP = "temp",
-	SETTING_CHANGED = "settingChanged",
-	PRINTER_SETTING_CHANGED = "printerSettingChanged",
-	MODEL_GROUP_LIST_CHANGED = "modelGroupListChanged",
-	PREPARE_JOB = "prepareJob",
-	PREPARE_JOB_FINISHED = "prepareJobFinished",
-	CHANGE_FILAMENT_REQUEST = "changeFilamentRequested",
-	REMOTE_SERVERS_CHANGED = "remoteServersChanged",
-	GET_EXTERNAL_LINKS = "getExternalLinks",
-	OPEN = "open",
-	DISCONNECTED = "disconnected",
-	CONNECTION_ERROR = "connectionError",
-
-	*/

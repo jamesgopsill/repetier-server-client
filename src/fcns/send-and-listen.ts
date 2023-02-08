@@ -1,13 +1,13 @@
-import type { RepetierServerClient, WsRequest, WsResponse } from "../index.js"
-import { RepetierServerEvents } from "../definitions/enums.js"
 import { v4 as uuidv4 } from "uuid"
+import { RepetierServerEvents } from "../definitions/enums.js"
+import type { RepetierServerClient, WsRequest, WsResponse } from "../index.js"
 
 export async function _sendAndListen(
 	this: RepetierServerClient,
 	action: string,
-	data: any
+	data: {} = {}
 ) {
-	return new Promise<WsResponse>((resolve) => {
+	return new Promise<WsResponse<any>>((resolve) => {
 		if (!this.ws) {
 			console.warn("Not Connected")
 			resolve(null)
