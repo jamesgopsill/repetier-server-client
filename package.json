@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/package",
-	"name": "repetier-server-client",
+	"name": "@jamesgopsill/repetier-server-client",
 	"version": "0.0.1",
 	"description": "A Typescript client for Repetier Server",
 	"engines": {
